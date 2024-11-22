@@ -19,7 +19,7 @@ export default class Arma {
     return this.descricao;
   }
 
-  //set vai fazer mudar o dano
+  //set vai fazer mudar o dano quando precisar
 
   setDano(dano: number) {
     if (dano < 0) {
