@@ -1,4 +1,5 @@
 import Arma from "./classes/Arma";
+import Inimigo from "./classes/Inimigo";
 import Personagem from "./classes/Personagem";
 
 const espada = new Arma(
@@ -6,16 +7,13 @@ const espada = new Arma(
   "a história desa arma é chata, pode pular"
 );
 
+//personagem
 const meuPersonagem = new Personagem("Gael", 300, 50);
 meuPersonagem.setArma(espada);
 
-console.log("Nome", meuPersonagem.getNome());
-console.log("Força", meuPersonagem.getForça());
-
-console.log("Arma", meuPersonagem.getArma());
-
-meuPersonagem.receberDano(10);
+const esqueleto = new Inimigo("Esquelto Escarlate", 100, 20);
+//inimigo
+esqueleto.equiparArma(espada);
+esqueleto.atacar(meuPersonagem);
 
 console.log(meuPersonagem.getVida());
-
-meuPersonagem.equiparArma(espada);
